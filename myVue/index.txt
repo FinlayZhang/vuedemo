@@ -1,0 +1,9 @@
+1、全局有一个类Vue，类的属性值data、id通过new Vue实例将属性传进来，类里面的dom通过id获得。
+2、observe 遍历了拿到的data对象，进行了拆分。
+3、defineReactive 定义一个相关的函数里呢 传了（vue的实例，text，'hello world'）
+4、data真是的数据 进行 set get （Object.defineProperty）
+5、Dep实现了观察者模式： text -> dep.addSub(Dep.target);     （set）放入观察者对象
+                                                      dep.notify();                        （get）发出通知
+6、Dep.target是一个watcher
+7、Compile函数(app节点，vm Vue实例)
+8、
